@@ -1,0 +1,110 @@
+<html>
+<head>
+	<title>Parallex test</title>
+	
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		ul li{
+			list-style: none;
+			overflow: hidden;
+			height: 600px;
+		}
+		.parallax-background{
+			height: 700px;
+		}
+		.movies{
+			background-image:url("./img/movies.jpg");
+			background-size: cover;
+			background-position: 100% 90%;
+		}
+		.tv{
+			background-image:url("./img/tv.png");
+			background-size: cover;
+			background-position: 100% 80%;
+			
+		}
+		.sports{
+			background-image:url("./img/sports.jpg");
+			background-size: cover;
+			background-position: 100% 35%;
+		
+		}
+		.cartoon{
+			background-image:url("./img/cartoon.jpg");
+			background-position: 0% 100%;
+			
+		}
+	</style>
+</head>
+<body>
+		<ul class="parallax">
+			<li>
+				<div class="parallax-background movies"></div>
+			</li>
+		</ul>
+		<ul class="parallax">
+			<li>
+				<div class="parallax-background tv"></div>
+			</li>
+		</ul>
+		<ul class="parallax">
+			<li>
+				<div class="parallax-background sports"></div>
+			</li>
+		</ul>
+		<ul class="parallax">
+			<li>
+				<div class="parallax-background cartoon"></div>
+			</li>
+		</ul>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript">
+
+		(function($){
+
+			var $container = $(".parallax");
+			var $divs = $container.find("div.parallax-background");
+			var scrolledThing = document.body;
+			var liHeight = $divs.eq(0).closest("li").height();
+			var diffHeight= $divs.eq(0).height - liHeight;
+
+
+
+			var i,len,div,li,offset,scroll,top;
+			var render = function(){
+
+				top = scrolledThing.scrollTop;
+
+				for(i=0,len=$divs.lenght;i<len;i++){
+
+					div = $divs[i];
+
+					li = div.parentNode;
+
+					offset = $(div).offset().top;
+					
+					scroll = Math.round(((top - offset) / liHieght) * diffHeight);
+					
+					div.style.webkitTransform = "translate3d(0px,"+scroll+"px,0px)";
+
+				}
+			};
+
+			(function loop(){
+				requestAnimationFrame(loop);
+				render();
+			})();
+
+
+		})(jQuery);
+
+	</script>		
+</body>
+</html>
