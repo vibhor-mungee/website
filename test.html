@@ -44,6 +44,7 @@
 	</style>
 </head>
 <body>
+	
 		<ul class="parallax">
 			<li>
 				<div class="parallax-background movies"></div>
@@ -73,7 +74,7 @@
 			var $divs = $container.find("div.parallax-background");
 			var scrolledThing = document.body;
 			var liHeight = $divs.eq(0).closest("li").height();
-			var diffHeight= $divs.eq(0).height - liHeight;
+			var diffHeight= $divs.eq(0).height() - liHeight;
 
 
 
@@ -81,8 +82,8 @@
 			var render = function(){
 
 				top = scrolledThing.scrollTop;
-
-				for(i=0,len=$divs.lenght;i<len;i++){
+				len=$divs.length;
+				for(i=0;i<len;i++){
 
 					div = $divs[i];
 
@@ -90,7 +91,7 @@
 
 					offset = $(div).offset().top;
 					
-					scroll = Math.round(((top - offset) / liHieght) * diffHeight);
+					scroll = Math.round(((top - offset) / liHeight) * diffHeight);
 					
 					div.style.webkitTransform = "translate3d(0px,"+scroll+"px,0px)";
 

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Bootswatch: Amelia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
@@ -16,7 +16,7 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 
-	<div class="navbar navbar-inverse">
+	<div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <a href="#" class="navbar-brand">Scratchy</a>
@@ -78,27 +78,40 @@
       </div>
     </div>
         
-    <div class="container">
-      <div class="row">
-         	<ul class="thumbnails">      
-          		<div class="thumbnail col-md-4">
-           		 	<img src="./img/tv.png" alt="">
-           		 	<h3>TV label</h3>
-           			<p>TV caption...</p>
-         		  </div>        
-          		<div class="thumbnail col-md-4">
-           		 	<img src="./img/movies.jpg" alt="">
-           		 	<h3>Movie label</h3>
-           			<p>Movie caption...</p>
-         		  </div>   
-          		<div class="thumbnail col-md-4">
-           		 	<img   src="./img/music.jpg" alt="">
-           		 	<h3>Music label</h3>
-           			<p>Music caption...</p>
-         		  </div>
-      	  </ul>
-      </div>    
-    </div>
-      <script src="./js/script.js"></script>
+    <div class="main-container">
+          <ul class="parallax par">
+            <li class="pali">
+              <div class="parallax-background movies"></div>
+              <div class="subcontent subcontent1">
+                  <h1>Movies</h1>
+              </div>
+            </li>
+          </ul>
+          <ul class="parallax par">
+            <li class="pali">
+              <div class="parallax-background tv"></div>
+              <div class="subcontent subcontent2">
+                  <h1>TV Series</h1>
+              </div>
+            </li>
+          </ul>
+          <ul class="parallax par">
+            <li class="pali">
+              <div class="parallax-background regional"></div>
+              <div class="subcontent subcontent3">
+                  <h1>Regional</h1>
+              </div>
+            </li>
+          </ul>
+          <ul class="parallax par">
+            <li class="pali">
+              <div class="parallax-background cartoon"></div>
+                <div class="subcontent subcontent4">
+                  <h1>Cartoon</h1>
+              </div>
+            </li>
+          </ul>
+     </div>     
+    <script src="./js/script.js"></script>
 
 </body>

@@ -21,54 +21,76 @@ body{
 	font-family:'Lobster',cursive;
 	font-size: 72px;
 }
-.item-img{
-	width: 280px;
-	height: 250px;
-}
-.jumbotron{
-	padding:5px;
-	margin-bottom:30px;
-	margin-right: 5px;
-	color:inherit;
-	background-color:#B2D7E3;
-	width: 32%;
-}
-.jumbotron h1,.jumbotron .h1{
-	color:inherit;
-}
-.jumbotron p{
-	margin-bottom:15px;
-	font-size:21px;
-	font-weight:200;
-}
-.jumbotron>hr{
-	border-top-color:#08494e;
-}
+.parallax-background{
+	height: 700px;
 
-.thumbnail-size{
-	min-height: 200px;
-	height: 200px;
-	width: 250px;
-	min-width: 250px;
 }
-.thumbnail {
-  display: block;
-  padding: 4px;
-  line-height: 1;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+.movies{
+	background-image:url("./../img/movies.jpg");
+	background-size: cover;
+	background-position: 100% 90%;
 }
-.thumbnail > img {
-  display: block;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.tv{
+	background-image:url("./../img/tv.png");
+	background-size: cover;
+	background-position: 100% 80%;
+	
 }
-.thumbnail .caption {
-  padding: 9px;
+.sports{
+	background-image:url("./../img/sports.jpg");
+	background-size: cover;
+	background-position: 100% 35%;
+
+}
+.regional{
+	background-image:url("./../img/regional.jpg");
+	background-size: cover;
+	background-position: 100% 35%;
+
+}
+.cartoon{
+	background-image:url("./../img/cartoon.jpg");
+	background-position: 0% 100%;
+	
+}
+.par{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	height: 600px;
+	position: relative;
+}
+.pali{
+	list-style: none;
+	overflow: hidden;
+	height: 600px;
+	position: relative;
+}
+.main-container{
+	margin: 0;
+	padding-left: 100px;
+	padding-right: 100px;
+
+}
+.subcontent{
+	position: absolute;
+	font-family:'Lobster',cursive;
+	color:white;
+}
+.subcontent1{
+	top:300px;
+	left: 100px;
+}
+.subcontent2{
+	top:300px;
+	left: 900px;
+}
+.subcontent3{
+	top:300px;
+	left: 100px;
+}
+.subcontent4{
+	top:300px;
+	left: 100px;
 }
